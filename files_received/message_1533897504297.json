@@ -1,0 +1,10 @@
+{
+"apiVersion": "7.1",
+"clientId": "67890",
+"leadId": "12345",
+"action": "received",
+"date": "2017-01-10T18:20:25+00:00",
+"subject": "Your Request",
+"body": "Hello Rachel \nI would like to schedule a call with you
+regarding setting up.\nThank you \nAnna Slazkiewicz"
+}

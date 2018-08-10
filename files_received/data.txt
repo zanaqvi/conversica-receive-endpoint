@@ -1,0 +1,92 @@
+{
+    "command": "SELECT",
+    "rowCount": 1,
+    "oid": null,
+    "rows": [
+        {
+            "user_id": 1,
+            "email_address": "testemail@sherlocktest.com",
+            "phone_number": "(800)123 1224",
+            "first_name": "TestUserUP2_FName",
+            "last_name": "testemail_4@sherlocktest.com",
+            "password": "e2fc714c4727ee9395f324cd2e7f331f",
+            "user_role": "user"
+        }
+    ],
+    "fields": [
+        {
+            "name": "user_id",
+            "tableID": 16404,
+            "columnID": 1,
+            "dataTypeID": 23,
+            "dataTypeSize": 4,
+            "dataTypeModifier": -1,
+            "format": "text"
+        },
+        {
+            "name": "email_address",
+            "tableID": 16404,
+            "columnID": 2,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 104,
+            "format": "text"
+        },
+        {
+            "name": "phone_number",
+            "tableID": 16404,
+            "columnID": 3,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 29,
+            "format": "text"
+        },
+        {
+            "name": "first_name",
+            "tableID": 16404,
+            "columnID": 4,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 54,
+            "format": "text"
+        },
+        {
+            "name": "last_name",
+            "tableID": 16404,
+            "columnID": 5,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 54,
+            "format": "text"
+        },
+        {
+            "name": "password",
+            "tableID": 16404,
+            "columnID": 6,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 154,
+            "format": "text"
+        },
+        {
+            "name": "user_role",
+            "tableID": 16404,
+            "columnID": 7,
+            "dataTypeID": 1043,
+            "dataTypeSize": -1,
+            "dataTypeModifier": 54,
+            "format": "text"
+        }
+    ],
+    "_parsers": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    ],
+    "RowCtor": null,
+    "rowAsArray": false
+}
