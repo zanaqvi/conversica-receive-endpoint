@@ -1,10 +1,22 @@
 //Initiallising node modules
 var express = require("express");
+var https = require('https');
 var fs = require('fs');
 var bodyParser = require("body-parser");
-//const { Pool, Client } = require('pg');
-
 var app = express();
+
+var multer = require('multer');
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, __dirname + '/upload')
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+var upload = multer({storage: storage});
+
+
 //var jwt = require('jsonwebtoken');
 // Setting Base directory
 app.use(bodyParser.json());
@@ -32,9 +44,23 @@ app.use('/files_received', express.static(__dirname + '/files_received'));
 app.use(express.static(__dirname + '/files_received')); 
 
 //Setting up server
+/*
 var server = app.listen(process.env.PORT || 3316, function () {
 	var port = server.address().port;
 	console.log("Conversica-endpoint app now running on port", port);
+});
+*/
+//trying to setup https server
+var options = {
+	key: fs.readFileSync('/etc/pki/tls/private/datakey.pem'),
+	cert: fs.readFileSync('/etc/pki/tls/certs/data.crt')
+	//key: fs.readFileSync('/etc/pki/tls/private/localhost.key'),
+	//cert: fs.readFileSync('/etc/pki/tls/certs/localhost.crt')
+  };
+
+var server = https.createServer(options, app).listen(process.env.PORT || 3316, function() {
+    var port = server.address().port;
+	console.log("Conversica-endpoint (https) app now running on port", port);
 });
 
 app.get("/api/test", function(req , res){
